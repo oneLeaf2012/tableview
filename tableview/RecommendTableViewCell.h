@@ -11,7 +11,7 @@
 @end
 
 @interface RecommendTableViewCell : UITableViewCell
-@property (nonatomic, strong) DYData *dyData;
+@property (nonatomic, strong) NSArray *dyData;
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 @property (nonatomic, weak) id<RecommendTableViewCellDelegate> delegate;
 @end

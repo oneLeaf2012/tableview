@@ -27,9 +27,9 @@
     
     
     
-//    self.dyDatas=[NSArray arrayWithObjects:@"fvvf",@"weff",@"vdfv", nil];
+    self.dyDatas=[NSArray arrayWithObjects:@"fvvf",@"weff",@"vdfv", @"weff",@"vdfv", @"weff",@"vdfv", @"weff",@"vdfv", nil];
     
-    self.dyDatas=[NSArray arrayWithObjects:@"fvvf", nil];
+//    self.dyDatas=[NSArray arrayWithObjects:@"fvvf", nil];
 
 //    self.dyDatas=[NSArray arrayWithObjects:@"fvvf", nil];
 
@@ -42,13 +42,23 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
  
-        return RECOMMEND_CELL_HEIGHT;
+//        return RECOMMEND_CELL_HEIGHT;
+    
+    
+    if ([self.dyDatas count]%2==0) {
+        return RECOMMEND_ITEM_HEIGHT*[self.dyDatas count]/2+ITEM_PADDING;
+        
+    }else{
+        return RECOMMEND_ITEM_HEIGHT*([self.dyDatas count]/2+1)+ITEM_PADDING;
+        
+    }
+
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView             // Default is 1 if not implemented
 {
     
-    return  [self.dyDatas count];
+    return  1;
     
 }
 
@@ -64,9 +74,11 @@
    
     RecommendTableViewCell *cell = [RecommendTableViewCell cellWithTableView:tableView];
     cell.delegate = self;
-    DYData *dyData = self.dyDatas[indexPath.section]
+//    DYData *dyData = self.dyDatas[indexPath.section]
     ;
-    cell.dyData = dyData;
+    cell.dyData = self.dyDatas;
+    
+    cell.backgroundColor=[UIColor redColor];
     return cell;
 
 }

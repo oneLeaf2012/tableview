@@ -16,7 +16,7 @@ static BOOL isReused = NO;
 
 @implementation RecommendTableViewCell
 
-- (void)setDyData:(DYData *)dyData
+- (void)setDyData:(NSArray *)dyData
 {
     _dyData = dyData;
     
@@ -30,14 +30,31 @@ static BOOL isReused = NO;
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        [self setupCollectionView];
     }
     return self;
 }
 
+-(void)layoutSubviews{
+
+    [super layoutSubviews];
+    
+    [self setupCollectionView];
+}
+
 - (void)setupCollectionView
 {
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, RECOMMEND_CELL_HEIGHT) collectionViewLayout:[[RecommendCollectionFlowLayout alloc] init]];
+//    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, RECOMMEND_CELL_HEIGHT) collectionViewLayout:[[RecommendCollectionFlowLayout alloc] init]];
+//    if ([self.dyDatas count]%2==0) {
+//        return RECOMMEND_ITEM_HEIGHT*[self.dyDatas count]/2+ITEM_PADDING;
+//        
+//    }else{
+//        return RECOMMEND_ITEM_HEIGHT*([self.dyDatas count]/2+1)+ITEM_PADDING;
+//        
+//    }
+
+    
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.frame.size.height-20) collectionViewLayout:[[RecommendCollectionFlowLayout alloc] init]];
+
     self.collectionView = collectionView;
     [self.contentView addSubview:collectionView];
     [collectionView registerNib:[UINib nibWithNibName:@"RecommendCollectionCell" bundle:nil] forCellWithReuseIdentifier:COLLECTION_IDENTIFIER];
@@ -68,7 +85,7 @@ static BOOL isReused = NO;
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 3;
+    return [self.dyData count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
