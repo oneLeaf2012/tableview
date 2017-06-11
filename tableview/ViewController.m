@@ -33,11 +33,7 @@
 
 //    self.dyDatas=[NSArray arrayWithObjects:@"fvvf", nil];
 
-    self.tableview.tableHeaderView
-
-    
-    self.tableview.tableFooterView
-}
+  }
 
 #pragma mark - tableView数据源及代理
 
