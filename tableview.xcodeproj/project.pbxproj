@@ -15,6 +15,11 @@
 		F010856E1EED750E005B5DB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F010856C1EED750E005B5DB0 /* LaunchScreen.storyboard */; };
 		F01085791EED750E005B5DB0 /* tableviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F01085781EED750E005B5DB0 /* tableviewTests.m */; };
 		F01085841EED750E005B5DB0 /* tableviewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F01085831EED750E005B5DB0 /* tableviewUITests.m */; };
+		F01085931EED859E005B5DB0 /* RecommendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F01085921EED859E005B5DB0 /* RecommendTableViewCell.m */; };
+		F01085971EED85DB005B5DB0 /* RecommendCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F01085951EED85DB005B5DB0 /* RecommendCollectionCell.m */; };
+		F01085981EED85DB005B5DB0 /* RecommendCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01085961EED85DB005B5DB0 /* RecommendCollectionCell.xib */; };
+		F010859B1EED8666005B5DB0 /* RecommendCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F010859A1EED8666005B5DB0 /* RecommendCollectionFlowLayout.m */; };
+		F010859E1EED8691005B5DB0 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = F010859D1EED8691005B5DB0 /* Common.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,15 @@
 		F010857F1EED750E005B5DB0 /* tableviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tableviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01085831EED750E005B5DB0 /* tableviewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tableviewUITests.m; sourceTree = "<group>"; };
 		F01085851EED750E005B5DB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F01085911EED859E005B5DB0 /* RecommendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendTableViewCell.h; sourceTree = "<group>"; };
+		F01085921EED859E005B5DB0 /* RecommendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendTableViewCell.m; sourceTree = "<group>"; };
+		F01085941EED85DB005B5DB0 /* RecommendCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCollectionCell.h; sourceTree = "<group>"; };
+		F01085951EED85DB005B5DB0 /* RecommendCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCollectionCell.m; sourceTree = "<group>"; };
+		F01085961EED85DB005B5DB0 /* RecommendCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendCollectionCell.xib; sourceTree = "<group>"; };
+		F01085991EED8666005B5DB0 /* RecommendCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendCollectionFlowLayout.h; sourceTree = "<group>"; };
+		F010859A1EED8666005B5DB0 /* RecommendCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendCollectionFlowLayout.m; sourceTree = "<group>"; };
+		F010859C1EED8691005B5DB0 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		F010859D1EED8691005B5DB0 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,15 @@
 		F010855D1EED750E005B5DB0 /* tableview */ = {
 			isa = PBXGroup;
 			children = (
+				F010859C1EED8691005B5DB0 /* Common.h */,
+				F010859D1EED8691005B5DB0 /* Common.m */,
+				F01085991EED8666005B5DB0 /* RecommendCollectionFlowLayout.h */,
+				F010859A1EED8666005B5DB0 /* RecommendCollectionFlowLayout.m */,
+				F01085941EED85DB005B5DB0 /* RecommendCollectionCell.h */,
+				F01085951EED85DB005B5DB0 /* RecommendCollectionCell.m */,
+				F01085961EED85DB005B5DB0 /* RecommendCollectionCell.xib */,
+				F01085911EED859E005B5DB0 /* RecommendTableViewCell.h */,
+				F01085921EED859E005B5DB0 /* RecommendTableViewCell.m */,
 				F01085611EED750E005B5DB0 /* AppDelegate.h */,
 				F01085621EED750E005B5DB0 /* AppDelegate.m */,
 				F01085641EED750E005B5DB0 /* ViewController.h */,
@@ -248,6 +271,7 @@
 			files = (
 				F010856E1EED750E005B5DB0 /* LaunchScreen.storyboard in Resources */,
 				F010856B1EED750E005B5DB0 /* Assets.xcassets in Resources */,
+				F01085981EED85DB005B5DB0 /* RecommendCollectionCell.xib in Resources */,
 				F01085691EED750E005B5DB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,9 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F01085931EED859E005B5DB0 /* RecommendTableViewCell.m in Sources */,
 				F01085661EED750E005B5DB0 /* ViewController.m in Sources */,
+				F010859B1EED8666005B5DB0 /* RecommendCollectionFlowLayout.m in Sources */,
 				F01085631EED750E005B5DB0 /* AppDelegate.m in Sources */,
 				F01085601EED750E005B5DB0 /* main.m in Sources */,
+				F01085971EED85DB005B5DB0 /* RecommendCollectionCell.m in Sources */,
+				F010859E1EED8691005B5DB0 /* Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
