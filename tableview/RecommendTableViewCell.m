@@ -44,16 +44,27 @@ static BOOL isReused = NO;
 - (void)setupCollectionView
 {
 //    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, RECOMMEND_CELL_HEIGHT) collectionViewLayout:[[RecommendCollectionFlowLayout alloc] init]];
-//    if ([self.dyDatas count]%2==0) {
-//        return RECOMMEND_ITEM_HEIGHT*[self.dyDatas count]/2+ITEM_PADDING;
-//        
-//    }else{
-//        return RECOMMEND_ITEM_HEIGHT*([self.dyDatas count]/2+1)+ITEM_PADDING;
-//        
-//    }
+    
+      UICollectionView *collectionView ;
 
     
-    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.frame.size.height-20) collectionViewLayout:[[RecommendCollectionFlowLayout alloc] init]];
+    if ([self.dyData count]%2==0) {
+        
+//       collectionView= [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, RECOMMEND_ITEM_HEIGHT*[self.dyData count]/2+ITEM_PADDING) collectionViewLayout:[[RecommendCollectionFlowLayout alloc] init]];
+        
+        
+     collectionView=   [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.frame.size.height) collectionViewLayout:[[RecommendCollectionFlowLayout alloc] init]];
+        
+    }else{
+        
+//        collectionView= [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, RECOMMEND_ITEM_HEIGHT*([self.dyData count]/2+1)+ITEM_PADDING) collectionViewLayout:[[RecommendCollectionFlowLayout alloc] init]];
+        collectionView=   [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.frame.size.height+RECOMMEND_ITEM_HEIGHT+ITEM_PADDING) collectionViewLayout:[[RecommendCollectionFlowLayout alloc] init]];
+
+        
+    }
+
+    
+//    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, self.frame.size.height) collectionViewLayout:[[RecommendCollectionFlowLayout alloc] init]];
 
     self.collectionView = collectionView;
     [self.contentView addSubview:collectionView];

@@ -27,7 +27,7 @@
     
     
     
-    self.dyDatas=[NSArray arrayWithObjects:@"fvvf",@"weff",@"vdfv", @"weff",@"vdfv", @"weff",@"vdfv", @"weff",@"vdfv", nil];
+    self.dyDatas=[NSArray arrayWithObjects:@"fvvf",@"weff",@"vdfv", @"weff",@"vdfv", @"weff",@"vdfv",@"vdfv", @"weff",@"vdfv",@"vdfv", nil];
     
 //    self.dyDatas=[NSArray arrayWithObjects:@"fvvf", nil];
 
@@ -43,7 +43,6 @@
 {
  
 //        return RECOMMEND_CELL_HEIGHT;
-    
     
     if ([self.dyDatas count]%2==0) {
         return RECOMMEND_ITEM_HEIGHT*[self.dyDatas count]/2+ITEM_PADDING;
@@ -78,7 +77,7 @@
     ;
     cell.dyData = self.dyDatas;
     
-    cell.backgroundColor=[UIColor redColor];
+    cell.backgroundColor=[UIColor clearColor];
     return cell;
 
 }
